@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Clock from "./Clock";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ class CMEntry extends Component {
+  render() {
+
+      //Destructuring
+      const{label, defaultValue} =this.props
+
+    return (
+      <div>
+         <span className="label"> {this.props.label}:</span>
+          <br />
+          <input type="text" name="username" defaultValue={this.props.defaultValue} />
+      </div>
+    )
+  }
 }
 
-export default App;
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+      this.state = {count: 0}
+
+      //นับเพิ่มทีละ 1 ทุกๆ 1 วินาที && เหมือนนาฬิกาจับเวลา
+      setInterval(()=>{
+        this.setState({count: this.state.count + 1})
+      }, 1000)
+  }
+
+  render() {
+    return ( 
+      <div style={{ padding: 50 }}>
+        <h1 className="App">Login</h1>
+        <Clock count = {this.state.count}/>   
+
+        <form>
+          <CMEntry label="Firstname" defaultValue="Admin"/>
+          <br />
+          <CMEntry label="Lastname" defaultValue="kub"/>
+          <br />
+          <br />
+          <input type="submit" defaultValue="Submit" />
+        </form>
+      </div>
+    );
+  }
+}

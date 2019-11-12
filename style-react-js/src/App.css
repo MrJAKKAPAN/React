@@ -1,5 +1,18 @@
 .App {
   text-align: center;
+  color: red;
+  padding: 0%;
+  width: auto;
+  height: auto;
+  font-size: 50px;
+  text-shadow: royalblue;
+  
+}
+.label{
+  color: #09d3ac;
+}
+.label2{
+ color: blue;
 }
 
 .App-logo {
