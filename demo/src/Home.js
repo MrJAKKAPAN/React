@@ -15,7 +15,7 @@ export default class Home extends Component {
 
 
     return (
-      <div style={{ padding: 40 } }>
+      <div style={{ padding: 40 }}>
         <h1 style={{color: "red ", backgroundColor:'gray'}}> Login </h1>
 
         <form >
