@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+        <div>
+           <View style={style.container}>
+               <View style={{with:50, height: 50, background: "blue" ,flex: 1}}/>
+               <View style={{with:50, height: 50, background: "green" ,flex: 1}}/>
+               <View style={{with:50, height: 50, background: "red" ,flex: 1}}/>   
+            </View> 
+        </div>
+    )
+}
 }
 
-export default App;
+const style = StyleSheet.create({
+container:{
+    background: "pink",
+    flex: "1",
+    paddingTop: Platform.OS == "ios" ? 25 : 0
+}
+})
