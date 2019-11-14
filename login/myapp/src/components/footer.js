@@ -1,46 +1,38 @@
-import React from 'react'
+// import React from 'react'
 
-class Footer extends React.Component {
-    constructor() {
-      super()
-      this.state = {
-        count: 0,
-      }
-    }
-  
-    handleClick = e => {
-      this.setState({
-        count: this.state.count + 1,
-      })
-    }
-  
-    render() {
-      return (
-        <div>
-          <h1>Current Count: {this.state.count}</h1>
-          <a href="#" onClick={this.handleClick}>
-            Increment
-          </a>;
-        </div>
-      )
-    }
-  }
-
-
-
-
-
-
-// const Footer = () => {
-//      return (
-//          <h1>My Footer</h1>
-//      )
+// class footer extrends React.Component{
+//     renderUserMessage(){
+//         return (
+//             <span>
+//                 <h2>{'Welcom ${ this.props.name}' } </h2>
+//                 <p>You can visit setting to reset your password</p>
+//             </span>
+            
+//         )
+//     }else{
+//         return (
+//             <h2> Hey man! Log in to see this section </h2>
+//         )
+//     }
 // }
-// // const Footer = ({ children }) => (
-// //     <>
-// //         {children}
-// //         456
-// //     </>
-// // )
+
+// render () {
+//     return(
+//         <div>
+//             <h1> My Super React App</h1>
+//             {this.renderUserMessage() }
+//         </div>
+//     )
+// }
+// }
+// export default Footer
+
+
+// const Footer = ({ children }) => (
+//     <>
+//         {children}
+        
+//     </>
+// )
 
 // export default Footer
