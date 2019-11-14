@@ -42,10 +42,7 @@ class Navbar extends Component {
             subTitle="CNX Hello Changmai"
         extra={[
           <Button href="">About</Button>,
-          <Button href="" type="danger">
-            Login
-          </Button>,
-        ]}>
+          <Button href="" type="danger"> Login </Button> ]}>
         
         <Descriptions size="small" column={1}>
 
