@@ -1,11 +1,10 @@
- .container { 
-      width: 100% 
+ #container { 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #282c34;
+      height: 200px;
  }
-.from {
-    padding-left: 50%;
-    display: inline;  
-    background-color:  green;
-}
 
 .App {
   text-align: center;

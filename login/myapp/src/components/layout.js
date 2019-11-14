@@ -4,12 +4,14 @@ import { SketchPicker } from 'react-color';
 
 
  class layout extends Component {
+    
+
 
   render() {
     return (
-      <>
+      <div style={{backgroundColor:'red',width:'auto',}} >       
         
-        <h2>Wellcom </h2>
+        <h2 style={{color:'orange',}}>Wellcom Login </h2>
         <form>
           Username:
           <br />
@@ -20,11 +22,11 @@ import { SketchPicker } from 'react-color';
           <input type="password" name="password" defaultValue="" />
           <br />
           <br />
-          <input type="submit" defaultValue="Submit" />
+          <button  type="primary" onClick={() => alert('Quy 😎')} >ok</button>
         </form>
 
 
-      </>
+      </div>
     );
   }
 }
