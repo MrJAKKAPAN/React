@@ -5,15 +5,18 @@ import { Row, Col } from "antd";
 import { Timeline, Icon } from "antd";
 import "antd/dist/antd.css";
 
+import { Rate } from 'antd';
+
+
 const { Meta } = Card;
 
 class Layout extends Component {
   render() {
     return (
       <div>
-        <Carousel>
+        <Carousel autoplay>
           <div>
-           
+
             <img
               alt="example"
               src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
@@ -26,8 +29,7 @@ class Layout extends Component {
             />
           </div>
 
-          <div>
-           
+          <div> 
             <img
               alt="example"
               src="https://images.unsplash.com/photo-1514995669114-6081e934b693?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
@@ -74,8 +76,14 @@ class Layout extends Component {
           >
             Technical testing 2015-09-01
           </Timeline.Item>
+          <Rate allowHalf defaultValue={4} />
+          
         </Timeline>
         </p>
+
+        
+        
+       
       </div>
     );
   }

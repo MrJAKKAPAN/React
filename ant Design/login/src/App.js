@@ -16,6 +16,7 @@ function App() {
       <header>
         <Navbar /></header>
         <Layout />
+        <br />
         
         <Footer />
     </div>

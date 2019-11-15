@@ -58,7 +58,7 @@ class Navbar extends Component {
 
     <Row type="flex" justify="space-around" style={{display:Grid}}>   
         <Col span={4}><Button type="link"  href=""><h3>Home</h3></Button></Col>  
-        <Col span={4}><Button type="link"  href=""><h3>Don't Click me</h3></Button></Col>
+        <Col span={4}><Button type="link"  href=""><h3>Don't Click</h3></Button></Col>
         <Col span={4}><Button type="link"  href=""><h3>Blog</h3></Button></Col>
         <Col span={4}><Button type="link"  href="" ><h3>Contant th</h3></Button></Col>
     </Row>
