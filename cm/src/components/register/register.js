@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-
+import {httpClient} from './../../utils/HttpClient';
 
 
 class Register extends Component {
@@ -9,11 +8,24 @@ class Register extends Component {
   super(props)
 
   this.state = {
-
      username:"",
      password:""
   }
 }
+ 
+// Arrow Function to Register
+onClickRegister =  ()=>{
+
+  // let data ={username:"admin", password: "1234"}
+  //   Axios.post("http://localhost:8085/api/v2/authen/register",data).then(response=>{
+  //     alert(JSON.stringify(response.data))
+  //   })
+  httpClient.post(server.REGISTER_URL, this.state).then(response=>{
+    alert(JSON.stringify(response.data))
+  })
+}
+ 
+
   render() {
     return (
       <div className="login-box">
@@ -50,48 +62,21 @@ class Register extends Component {
               />
               <span className="glyphicon glyphicon-lock form-control-feedback" />
             </div>
-            {/* firstname
-            <div className="form-group has-feedback">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="First Name"
-              />
-              <span className="glyphicon glyphicon-lock form-control-feedback" />
-            </div>
-
-            {/* lastname */}
-            {/* <div className="form-group has-feedback">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Last name"
-              />
-              <span className="glyphicon glyphicon-lock form-control-feedback" />
-            </div> */}
-            {/* Address */}
-            {/* <div className="form-group has-feedback">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Address"
-              />
-              <span className="glyphicon glyphicon-lock form-control-feedback" />
-            </div>  */}
-
-            
-    <span>#Debug:{JSON.stringify(this.state)}</span>
+           
+      {/* ไว้เทส ว่าของมูส่งไปรึป่าว      */}
+    {/* <span>#Debug:{JSON.stringify(this.state)}</span> */}
 
 
             {/* Register */}
             <div className="row">
             <div className="col-xs-12">
                <button
+                   onClick={this.onClickRegister}
                    type="submit"
                    
                    className="btn btn-success btn-block btn-flat"
                >
-                     Register
+                     Register   
                </button>
             </div>
             </div>
@@ -108,7 +93,7 @@ class Register extends Component {
                     this.props.history.goBack()}
                     }
                     style={{marginTop: 8}}
-                   className="btn btn-danger btn-block btn-flat"
+                    className="btn btn-danger btn-block btn-flat"
                >
                      cancel
                </button>
