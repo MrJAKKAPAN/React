@@ -1,11 +1,18 @@
-const app = require("express")()
+// const app = require("express")()
+const express = require("express")
+const app = express()
 const bodyParser = require('body-parser');
 // เป็นรูปแบบของการเขียน souceform
-// const express = require("express");
-// const app = express()
+
+
+
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+//กำหนดให้ user เข้าใช้งานในไฟล์ได้ (กำหนดสิทธิ์เข้าในหลังบ้าน))
+app.use(express.static(__dirname))
+
 // link ไฟล์
 app.use("/api/v2/authen/", require("./api_authen"))
 app.use("/api/v2/stock/", require("./api_stock"))
