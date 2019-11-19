@@ -37,7 +37,8 @@ class Register extends Component {
             <div className="col-xs-12">
                <button
                    type="submit"
-                   className="btn btn-primary btn-block btn-flat"
+                   
+                   className="btn btn-success btn-block btn-flat"
                >
                      Register
                </button>
@@ -49,9 +50,11 @@ class Register extends Component {
             <div className="col-xs-12">
                <button
                    type="submit"
-                   className="btn btn-primary btn-block btn-flat"
+                   onClick={()=>this.props.history.push("/login")}
+                   style={{marginTop: 8}}
+                   className="btn btn-danger btn-block btn-flat"
                >
-                     Register
+                     cancel
                </button>
             </div>
             </div>

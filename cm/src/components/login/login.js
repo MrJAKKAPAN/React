@@ -37,7 +37,7 @@ class Login extends Component {
             <div className="col-xs-12">
                <button
                    type="submit"
-                   className="btn btn-primary btn-block btn-flat"
+                   className="btn btn-success btn-block btn-flat"
                >
                      Sign In
                </button>
