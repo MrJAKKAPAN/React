@@ -16,9 +16,9 @@ class Login extends Component {
           <form action="../../index2.html" method="post">
             <div className="form-group has-feedback">
               <input
-                type="email"
+                type="username"
                 className="form-control"
-                placeholder="Email"
+                placeholder="Username"
               />
               <span className="glyphicon glyphicon-envelope form-control-feedback" />
             </div>
@@ -60,6 +60,9 @@ class Login extends Component {
               </div>
               {/* /.col */}
             </div>
+          
+          
+          
           </form>
         </div>
         {/* /.login-box-body */}
